@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import HouseMapView from "@/components/HouseMapView";
+import { useIsMobile } from "@/hooks/use-mobile";
 import { 
   AlertCircle, 
   Phone, 
@@ -17,6 +18,7 @@ import { useNavigate } from "react-router-dom";
 
 const EmergencyAlert = () => {
   const navigate = useNavigate();
+  const isMobile = useIsMobile();
 
   const alertData = {
     type: "Fall Detected",

@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import StatusCard from "@/components/StatusCard";
 import VitalsChart from "@/components/VitalsChart";
 import { Card } from "@/components/ui/card";
+import { useIsMobile } from "@/hooks/use-mobile";
 import { 
   Heart, 
   Activity, 
@@ -14,6 +15,7 @@ import { useNavigate } from "react-router-dom";
 
 const Vitals = () => {
   const navigate = useNavigate();
+  const isMobile = useIsMobile();
 
   const heartRateData = [
     { time: '8:00', value: 68 },

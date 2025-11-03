@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import StatusCard from "@/components/StatusCard";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useIsMobile } from "@/hooks/use-mobile";
 import { 
   Heart, 
   Activity, 
@@ -19,6 +20,7 @@ import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
   const navigate = useNavigate();
+  const isMobile = useIsMobile();
   const [cameraEnabled, setCameraEnabled] = useState(true);
 
   const recentAlerts = [
