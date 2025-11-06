@@ -139,7 +139,7 @@ const EditableHouseMap = ({ rooms: initialRooms, alertRoom, onRoomsChange }: Edi
         </div>
       </div>
       
-      <div className="relative bg-accent/30 rounded-lg p-2 md:p-4 border border-border" style={{ minHeight: '300px', aspectRatio: '4/3' }}>
+      <div className="relative bg-accent/30 rounded-lg p-2 md:p-4 border border-border overflow-hidden" style={{ minHeight: '300px', maxHeight: '70vh', aspectRatio: '4/3' }}>
         {rooms.map((room) => (
           <div
             key={room.id}
