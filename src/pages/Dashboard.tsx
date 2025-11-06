@@ -17,6 +17,7 @@ import {
   AlertCircle
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import echoCareLogoUrl from "@/assets/echocare-logo.png";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -35,9 +36,11 @@ const Dashboard = () => {
       <header className="mb-8">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-3">
-            <div className="p-3 bg-primary/10 rounded-xl">
-              <Home className="w-8 h-8 text-primary" />
-            </div>
+            <img 
+              src={echoCareLogoUrl} 
+              alt="EchoCare Logo" 
+              className="w-14 h-14 rounded-xl"
+            />
             <div>
               <h1 className="text-3xl font-bold text-foreground">EchoCare</h1>
               <p className="text-sm text-muted-foreground">Your smart home health assistant</p>
